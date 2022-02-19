@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     #########Cors Headers########
     'corsheaders',
+    ###########Swagger Docs######
+    'drf_yasg',
     #########Created Apps########
     'login_signup',
     
