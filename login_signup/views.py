@@ -28,7 +28,7 @@ class Registration(generics.CreateAPIView):
                 my_user = serializer.save()
                 token = Token.objects.get(user = my_user).key
                 data['old_token']=token
-                current_site = 'https://new-nekoma-project.herokuapp.com/'
+                current_site = 'https://new-nekoma-project.herokuapp.com'
                 relative_link = reverse('verifyEmail')          
                 absurl = current_site + relative_link + "?token="+str(token) 
                 email_body = 'Hi ' + my_user.username + ' Use link below to verify your email \n' + absurl  
