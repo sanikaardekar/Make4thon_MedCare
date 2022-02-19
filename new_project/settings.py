@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-iut=7+erqd)v6_2$ok57c_fq7*a*-%d*#ae@s@rky&x(m-k68#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['new-nekoma-project.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -148,6 +148,11 @@ FRONT_END_HOST="http://localhost:3000"
 LOGIN_REDIRECT_URL = '/home'
 LOGOUT_REDIRECT_URL = '/'
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "https://new-nekoma-project.herokuapp.com",
+    "http://localhost:8000",
+    "http://localhost:3000",
+
+]
 
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
