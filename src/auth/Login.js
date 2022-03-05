@@ -57,11 +57,6 @@ export default function Login() {
     createacc();
   };
 
-  const saveToken = (value) => {
-    localStorage.setItem("token", value);
-    localStorage.getItem("token");
-  };
-
   const history = useNavigate();
 
   async function createacc() {
@@ -83,7 +78,7 @@ export default function Login() {
       );
       result = await result.json();
       console.log(result);
-      saveToken(result.token)
+      localStorage.setItem('')
       if (result.token) {
         history("/home");
       }
@@ -133,6 +128,9 @@ export default function Login() {
           result = await result.json();
           console.log(result);
           if (result.token) {
+          sessionStorage.setItem('Name', result.username);
+          sessionStorage.setItem('user_id', result.user_id);
+          sessionStorage.setItem('token', result.token)
             history("/home");
           }
         } catch (error) {
@@ -144,6 +142,10 @@ export default function Login() {
       createacc();
     },
   });
+
+  // const handleStorage = ()=>{
+  //   localStorage.setItem('', name)
+  // }
 
   return (
     <>
