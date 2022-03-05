@@ -1,0 +1,80 @@
+/* header */
+header {
+  display: flex;
+  padding: 7px;
+  align-items: center;
+}
+header .title {
+  flex-grow: 3;
+  text-align: right;
+  margin-right: 30px;
+  font-size: 0.6em;
+}
+header h1 {
+  border-bottom: 1px solid rgba(8, 8, 8, 0.2);
+  padding-bottom: 10px;
+}
+header {
+  width: 80px;
+  overflow: visible;
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/* nav */
+
+.socialLinks {
+  text-decoration: none;
+  font-weight: 700;
+}
+.iconPosition {
+  transform: translateY(3px);
+}
+.HeaderSocial {
+  background-color: yellow;
+  padding: 3px;
+  transform: translateY(-10px);
+  border-bottom: 2px solid #201f45;
+}
+
+.navBar Button {
+  background-color: #49ab9480;
+  /* margin-left: 10px; */
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.headerLinks {
+  text-decoration: none;
+  color: black;
+  /* padding: 1px; */
+  font-size: 1.5rem;
+}
+
+.btn {
+  background-color: #49ab9480;
+  font-family: "Source Serif 4", sans-serif;
+  font-weight: 800;
+  border: 3px solid transparent;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 1.2rem;
+
+  cursor: pointer;
+}
+.btn:hover {
+  border-bottom: 3px solid black;
+}
+
+@media (max-width: 610px) {
+  .HeaderSocial {
+    font-size: 10px;
+  }
+}
+@media (max-width:900px){
+  .footerI{
+    transform: translateY(-50px);
+  }
+}
