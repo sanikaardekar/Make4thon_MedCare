@@ -15,17 +15,40 @@ const Meditation = () => {
           <Grid
             container
             spacing={2}
-            style={{ justifyContent: "center", alignItems:"center" }}
+            style={{ justifyContent: "center", alignItems: "center" }}
           >
-            <Grid item sm={12} md={6} lg={7} style={{ padding: "5%", justifyContent: "center", alignItems:"center" }} className="timergrid">
-              <p style={{fontSize:"50px",fontWeight:"700"}}>Prayer is when you talk to God</p>
-              <p style={{fontSize:"24px",fontWeight:"700", paddingBottom:"168px"}}><i>Meditation</i> is when you listen to God</p>
+            <Grid
+              item
+              sm={12}
+              md={6}
+              lg={7}
+              style={{
+                padding: "5%",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className="timergrid"
+            >
+              <div style={{ paddingBottom: "40px" }}>
+                <p style={{ fontSize: "50px", fontWeight: "500" }}>
+                  Prayer is when you talk to <span style={{color:"#49AB94"}}>God</span>
+                </p>
+                <i style={{ fontSize: "30px", fontWeight: "500" }}>
+                <span style={{color:"#49AB94"}}>Meditation</span> is when you listen to God
+                </i>
+              </div>
               <div className="timerBack">
                 <CountDownTimer />
               </div>
               {show && <OpeningMsg />}
             </Grid>
-            <Grid item xs={12} sm={12} md={5} style={{paddingTop:"100px", backgroundColor:"#333333", height:"88vh", paddingRight:"500px"}}>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={5}
+              style={{ paddingTop: "100px", height: "88vh" }}
+            >
               <div className="spotifyPlayer">
                 <iFrame
                   src="https://open.spotify.com/embed/playlist/5biekm8QYDTMHzxLqkIn6M?utm_source=generator&theme=0"

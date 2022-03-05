@@ -77,7 +77,7 @@ const CountDownTimer = () => {
             direction="backward"
             startImmediately={true}
           >
-            {({ start, resume, pause, stop, reset, timerState }) => (
+            {({ start, pause, reset }) => (
               <>
                 <div>
                   <Timer.Hours /> : <Timer.Minutes /> : <Timer.Seconds />

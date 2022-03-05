@@ -65,7 +65,7 @@ const Navbar = () => {
           </ListItem>
         </Link>
         {["Meditation", "Yoga", "Quiz","Forums", "Feedback", "VideoChat"].map((text, index) => (
-          <Link className="mobileDrawer" to={`/${text.toLowerCase()}`} style={{textDecoration:"none"}}>
+          <Link className="mobileDrawer" to={`/${text.toLowerCase()}`} style={{textDecoration:"none"}} key={index}>
             <ListItem button key={text} >
               <ListItemIcon>
                 <HiOutlineArrowNarrowRight className="mobileDrawer" />
