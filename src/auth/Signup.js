@@ -57,6 +57,11 @@ export default function SignupForAdmin() {
     createacc();
   };
 
+  const saveUsername = (value) => {
+    localStorage.setItem("username", value);
+    localStorage.getItem("username");
+  };
+
   const history = useNavigate();
 
   async function createacc() {
@@ -79,6 +84,7 @@ export default function SignupForAdmin() {
       );
       result = await result.json();
       console.log(result);
+      //saveUsername(result.username)
       if (result.old_token) {
         swal.fire("Signed in Successfully!", "Please verify your email", "success");
         history("/login");
