@@ -10,11 +10,11 @@ import Navbar from "./components/HeaderFooter/Navbar";
 import NotFound from "./components/NotFound";
 import Yoga from "./pages/Yoga/Yoga";
 import HomePage from "./pages/HomePage/HomePage";
-import Posts from "./pages/Posts/Posts";
 import Feedback from "./pages/Feedback/Feedback";
 import Quiz from "./pages/Quiz/Quiz";
 import Meditation from "./pages/Meditation/Meditation";
 import Forums from "./pages/Posts/Forums";
+import VideoChat from "./pages/VideoChat/VideoChat";
 
 function App() {
   useEffect(() => {
@@ -96,6 +96,15 @@ function App() {
               <>
                 <Navbar />
                 <Meditation />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/videochat"
+            element={
+              <>
+                <Navbar />
+                <VideoChat />
               </>
             }
           ></Route>
