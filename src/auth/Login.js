@@ -11,7 +11,6 @@ import {
   Button,
 } from "@mui/material";
 import { MdEmail, MdVisibility, MdVisibilityOff } from "react-icons/md";
-import { makeStyles } from "@mui/styles";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
@@ -20,7 +19,7 @@ import swal from 'sweetalert2';
 import { URL } from "../utils/api";
 
 export default function Login() {
-  const [isLoading, setLoading] = useState(true);
+  const [setLoading] = useState(true);
 
   const validationSchema = Yup.object({
     email: Yup.string("Enter your email")
@@ -32,15 +31,6 @@ export default function Login() {
       .required("Password is required"),
   });
 
-  const useStyles = makeStyles(() => ({
-    img: {
-      width: "200px",
-      height: "200px",
-    },
-    imgDiv: {
-      // padding: '0'
-    },
-  }));
   const [values, setValues] = useState({
     password: "",
     email: "",
@@ -89,9 +79,6 @@ export default function Login() {
     }
   }
 
-  // const handleChanges = (prop) => (event) => {
-  //   setValues({ ...values, [prop]: event.target.value });
-  // };
   const handleShowPassword = () => {
     console.log(setValues);
     setValues({ ...values, showPassword: !values.showPassword });
@@ -142,10 +129,6 @@ export default function Login() {
       createacc();
     },
   });
-
-  // const handleStorage = ()=>{
-  //   localStorage.setItem('', name)
-  // }
 
   return (
     <>
