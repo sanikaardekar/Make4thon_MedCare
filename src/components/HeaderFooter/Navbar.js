@@ -64,7 +64,7 @@ const Navbar = () => {
             </ListItemText>
           </ListItem>
         </Link>
-        {["Meditation", "Yoga", "Quiz","Discuss", "Feedback"].map((text, index) => (
+        {["Meditation", "Yoga", "Quiz","Forums", "Feedback"].map((text, index) => (
           <Link className="mobileDrawer" to={`/${text.toLowerCase()}`} style={{textDecoration:"none"}}>
             <ListItem button key={text} >
               <ListItemIcon>
@@ -80,7 +80,7 @@ const Navbar = () => {
       {/* <hr style={{color:"white"}}/> */}
     </Box>
   );
-  
+  const name = localStorage.getItem("username");
  
   return (
     <AppBar
@@ -158,15 +158,15 @@ const Navbar = () => {
               <Link className="headerLinks" to="/quiz">
                 <button className="btn">Quiz</button>
               </Link>
-              <Link className="headerLinks" to="/discuss">
-                <button className="btn">Discuss</button>
+              <Link className="headerLinks" to="/forums">
+                <button className="btn">Forums</button>
               </Link>
               <Link className="headerLinks" to="/feedback">
                 <button className="btn">Feedback</button>
               </Link>
             </div>
           </Box>
-          <Avatar sx={{ bgcolor: colors.greenA }}></Avatar>
+          <Avatar sx={{ bgcolor: colors.greenA }}>{name}</Avatar>
         </Toolbar>
       </Container>
     </AppBar>

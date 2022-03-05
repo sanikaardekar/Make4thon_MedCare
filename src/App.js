@@ -12,8 +12,9 @@ import Yoga from "./pages/Yoga/Yoga";
 import HomePage from "./pages/HomePage/HomePage";
 import Posts from "./pages/Posts/Posts";
 import Feedback from "./pages/Feedback/Feedback";
-import Meditation from "./pages/Meditation/Meditation";
 import Quiz from "./pages/Quiz/Quiz";
+import Meditation from "./pages/Meditation/Meditation";
+import Forums from "./pages/Posts/Forums";
 
 function App() {
   useEffect(() => {
@@ -63,11 +64,20 @@ function App() {
             }
           ></Route>
           <Route
-            path="/discuss"
+            path="/quiz"
             element={
               <>
                 <Navbar />
-                <Posts />
+                <Quiz />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/forums"
+            element={
+              <>
+                <Navbar />
+                <Forums />
               </>
             }
           ></Route>
@@ -80,8 +90,15 @@ function App() {
               </>
             }
           ></Route>
-           <Route path="/meditation" element={<><Navbar /><Meditation/></>}></Route>
-           <Route path="/quiz" element={<><Navbar /><Quiz/></>}></Route>
+          <Route
+            path="/meditation"
+            element={
+              <>
+                <Navbar />
+                <Meditation />
+              </>
+            }
+          ></Route>
           <Route
             path="*"
             element={

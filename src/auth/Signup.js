@@ -59,7 +59,7 @@ export default function SignupForAdmin() {
 
   const saveUsername = (value) => {
     localStorage.setItem("username", value);
-    localStorage.getItem("username");
+    //localStorage.getItem("username");
   };
 
   const history = useNavigate();
@@ -84,7 +84,6 @@ export default function SignupForAdmin() {
       );
       result = await result.json();
       console.log(result);
-      //saveUsername(result.username)
       if (result.old_token) {
         swal.fire("Signed in Successfully!", "Please verify your email", "success");
         history("/login");

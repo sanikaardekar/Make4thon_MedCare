@@ -31,8 +31,7 @@ export default function Posts() {
       async function post() {
         // console.log("hello");
         try {
-          let token = localStorage.getItem('token');
-          let username = localStorage.getItem('username')
+          let token = sessionStorage.getItme('token');
           let result = await fetch(
             URL + "disc-forum/forum/",
             {
