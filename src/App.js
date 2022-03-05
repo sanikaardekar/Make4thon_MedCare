@@ -14,6 +14,7 @@ import HomePage from './pages/HomePage/HomePage';
 import Navbar from './components/HeaderFooter/Navbar';
 import Meditation from './pages/Meditation/Meditation';
 import NotFound from './components/NotFound';
+import Yoga from './pages/Yoga/Yoga';
 
 function App() {
 
@@ -28,8 +29,9 @@ function App() {
         <Route exact path="/" element={<><NavbarLogin/><Signup/></>} />
         <Route exact path="/login" element={<><NavbarLogin/><Login /></>} />
         <Route path="/home" element={<><HomePage/></>}></Route>
-        {/*<Route path="/yoga" element={<><Navbar /><Yoga/></>}></Route>*/}
         <Route path="/meditation" element={<><Navbar /><Meditation/></>}></Route> 
+        <Route path="/home" element={<><Navbar/><HomePage/></>}></Route>
+        <Route path="/yoga" element={<><Navbar /><Yoga/></>}></Route>
         <Route path="*" element={<><NotFound/></>}></Route>
       </Routes>
     </Router>
