@@ -155,8 +155,8 @@ const Navbar = () => {
               <Link className="headerLinks" to="/yoga">
                 <button className="btn">Yoga</button>
               </Link>
-              <Link className="headerLinks" to="/chakras">
-                <button className="btn">Chakras</button>
+              <Link className="headerLinks" to="/quiz">
+                <button className="btn">Quiz</button>
               </Link>
               <Link className="headerLinks" to="/discuss">
                 <button className="btn">Discuss</button>

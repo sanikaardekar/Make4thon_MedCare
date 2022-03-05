@@ -1,5 +1,3 @@
-import Navbar from "../../components/HeaderFooter/Navbar";
-//import homePage from '../../assets/homePage.png';
 import { Grid, Button, Typography } from "@mui/material";
 import "./HomePage.css";
 
