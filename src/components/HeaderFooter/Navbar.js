@@ -14,6 +14,7 @@ import ListItemText from "@mui/material/ListItemText";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
+import Avatar from '@mui/material/Avatar';
 // import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import colors from "../../utils/colors"
 import "./Header.css";
@@ -63,7 +64,7 @@ const Navbar = () => {
             </ListItemText>
           </ListItem>
         </Link>
-        {["Meditation", "Yoga", "Quiz"].map((text, index) => (
+        {["Meditation", "Yoga", "Chakras","Discuss", "Feedback"].map((text, index) => (
           <Link className="mobileDrawer" to={`/${text.toLowerCase()}`} style={{textDecoration:"none"}}>
             <ListItem button key={text} >
               <ListItemIcon>
@@ -79,7 +80,8 @@ const Navbar = () => {
       {/* <hr style={{color:"white"}}/> */}
     </Box>
   );
-
+  
+ 
   return (
     <AppBar
       style={{ background: "transparent", boxShadow: "none",paddingBottom:"30px" }}
@@ -156,8 +158,15 @@ const Navbar = () => {
               <Link className="headerLinks" to="/quiz">
                 <button className="btn">Quiz</button>
               </Link>
+              <Link className="headerLinks" to="/discuss">
+                <button className="btn">Discuss</button>
+              </Link>
+              <Link className="headerLinks" to="/feedback">
+                <button className="btn">Feedback</button>
+              </Link>
             </div>
           </Box>
+          <Avatar sx={{ bgcolor: colors.greenA }}></Avatar>
         </Toolbar>
       </Container>
     </AppBar>

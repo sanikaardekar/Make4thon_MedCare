@@ -18,7 +18,7 @@ export default function HomePage() {
             </Grid>
             <br />
             <Grid item sm={6} md={3}>
-              <Typography style={{ fontFamily:"Roboto", fontSize: "1.5rem" }}>tag line hello dhcbh wfhuwehf </Typography>
+              <Typography style={{ fontFamily:"Roboto", fontSize: "1.5rem" }}>We Got Your Back </Typography>
             </Grid>
             <br />
             <Grid item sm={6} md={3}>

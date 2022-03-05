@@ -57,6 +57,11 @@ export default function Login() {
     createacc();
   };
 
+  const saveToken = (value) => {
+    localStorage.setItem("token", value);
+    localStorage.getItem("token");
+  };
+
   const history = useNavigate();
 
   async function createacc() {
@@ -78,6 +83,7 @@ export default function Login() {
       );
       result = await result.json();
       console.log(result);
+      saveToken(result.token)
       if (result.token) {
         history("/home");
       }

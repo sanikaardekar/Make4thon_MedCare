@@ -1,5 +1,5 @@
 .right-box{
-    min-height: 89vh;
+    min-height: 80vh;
     min-width: 55vw;
     /* background-color: aqua; */
     background-image: url(../../assets/homePage.png);
@@ -11,7 +11,7 @@
     background-position-y: -7rem;
 }
 .left-box{
-    min-height: 89vh;
+    min-height: 80vh;
     min-width: 45vw;
     display: flex;
     justify-content: center;
@@ -35,14 +35,14 @@
 }
 @media screen and (min-width: 910px) and (max-width: 1285px){
     .left-box{
-        min-height: 89vh;
+        min-height: 80vh;
         min-width: 45vw;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .right-box{
-        min-height: 89vh;
+        min-height: 80vh;
         min-width: 55vw;
         /* background-color: aqua; */
         background-image: url(../../assets/homePage.png);
