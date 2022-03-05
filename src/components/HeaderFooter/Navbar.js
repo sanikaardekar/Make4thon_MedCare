@@ -63,7 +63,7 @@ const Navbar = () => {
             </ListItemText>
           </ListItem>
         </Link>
-        {["Meditation", "Yoga", "Chakras"].map((text, index) => (
+        {["Meditation", "Yoga", "Quiz"].map((text, index) => (
           <Link className="mobileDrawer" to={`/${text.toLowerCase()}`} style={{textDecoration:"none"}}>
             <ListItem button key={text} >
               <ListItemIcon>
@@ -153,8 +153,8 @@ const Navbar = () => {
               <Link className="headerLinks" to="/yoga">
                 <button className="btn">Yoga</button>
               </Link>
-              <Link className="headerLinks" to="/chakras">
-                <button className="btn">Chakras</button>
+              <Link className="headerLinks" to="/quiz">
+                <button className="btn">Quiz</button>
               </Link>
             </div>
           </Box>
