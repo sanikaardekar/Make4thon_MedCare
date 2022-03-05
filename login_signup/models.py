@@ -10,7 +10,6 @@ class MyUser(AbstractUser):
     user_id   = models.AutoField(primary_key=True)
     username  = models.CharField(max_length = 100,unique=True, blank = False)
     email     = models.EmailField(max_length=100,unique=True)
-    is_seller = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)
     USERNAME_FIELD='email'
     REQUIRED_FIELDS=['username']

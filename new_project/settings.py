@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     #########Created Apps########
     'login_signup',
+    'disc_forum'
     
 ]
 

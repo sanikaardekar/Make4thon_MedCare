@@ -53,7 +53,6 @@ def verifyEmail(request):
     data['response'] = "successfully registered a new user"
     data['email'] = user.email
     data['user_id']=user.user_id
-    data['is_seller']=str(user.is_seller)
     if user.is_active == False:
         user.is_active = True
         user.save()
@@ -80,5 +79,4 @@ class LoginView(generics.CreateAPIView):
             data['email'] = user.email
             data['token'] = token
             data['user_id']=user.user_id
-            data['is_seller']=str(user.is_seller)
             return Response(data, status = status.HTTP_200_OK)
