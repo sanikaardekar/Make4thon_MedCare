@@ -8,13 +8,8 @@ const Quiz = () => {
   const [clicked, setClicked] = useState(false);
 
 const handleAnswer = (score) => {
-    console.log("dcdece");
-// // if(score===100){
-// //     setScores(scores +100);
-// //     console.log("vfg");
-// //     console.log(scores);
-// // }
-// setClicked(true);
+    // setScores(scores+100)
+    console.log("frr")
 }
 
   return (

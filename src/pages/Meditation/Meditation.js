@@ -19,14 +19,9 @@ const Meditation = () => {
           >
             <Grid item sm={12} md={6} lg={7} style={{ padding: "5%", justifyContent: "center", alignItems:"center" }} className="timergrid">
               <p style={{fontSize:"50px",fontWeight:"700"}}>Prayer is when you talk to God</p>
-              <p style={{fontSize:"24px",fontWeight:"700", paddingBottom:"168px"}}>Meditation is when you listen to God</p>
+              <p style={{fontSize:"24px",fontWeight:"700", paddingBottom:"168px"}}><i>Meditation</i> is when you listen to God</p>
               <div className="timerBack">
                 <CountDownTimer />
-                {/* <Lottie animationData={timerback} 
-                style={{
-                    height:700
-                }}
-            /> */}
               </div>
               {show && <OpeningMsg />}
             </Grid>
