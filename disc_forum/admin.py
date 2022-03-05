@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from disc_forum.models import Discussion, Forum
 
 # Register your models here.

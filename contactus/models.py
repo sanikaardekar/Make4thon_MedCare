@@ -6,5 +6,6 @@ class Contact(models.Model):
     last_name=models.CharField(max_length=255)
     email_id=models.EmailField(max_length=255)
     issue=models.TextField()
+    stars=models.IntegerField(default=3)
     def __str__(self):
         return self.email_id

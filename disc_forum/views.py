@@ -10,3 +10,4 @@ class DiscussionView(generics.ListCreateAPIView):
 class ForumView(generics.ListCreateAPIView):
     queryset=Forum.objects.all()
     serializer_class=ForumSerializer
+

@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.db import models 
-    
+from login_signup.models import *
 #parent model
 class Forum(models.Model):
     name=models.CharField(max_length=200,default="anonymous")
@@ -22,3 +22,5 @@ class Discussion(models.Model):
  
     def __str__(self):
         return str(self.forum)
+
+
