@@ -14,7 +14,7 @@ const Quiz = () => {
 
   const handleAnswer = (score) => {
     if (score === 100) {
-      console.log(scores);
+      console.log(setScores);
       setScores(scores + score);
       console.log(scores);
     } else if (score === 60) {
@@ -87,13 +87,15 @@ const Quiz = () => {
               disabled={!clicked}
               style={{
                 borderRadius: "31px",
-                backgroundColor: "#49AB94",
+                backgroundColor: "#333333",
                 height: "4rem",
                 width: "10rem",
-                fontSize: "2.5rem",
+                fontSize: "2.1rem",
                 paddingTop: "0rem",
-                color: "#B10A47",
+                color: "white",
                 marginTop: "1rem",
+                cursor:"pointer",
+                textDecoration:"none"
               }}
               variant="contained"
             >

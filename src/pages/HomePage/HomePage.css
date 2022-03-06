@@ -1,14 +1,13 @@
 .right-box{
     min-height: 80vh;
     min-width: 55vw;
-    /* background-color: aqua; */
     background-image: url(../../assets/homePage.png);
     background-repeat: no-repeat;
     background-size: cover;
     overflow:hidden;
     background-position: center;
     background-position-x: 5rem;
-    background-position-y: -7rem;
+    background-position-y: -9rem;
 }
 .left-box{
     min-height: 80vh;
@@ -16,13 +15,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 5rem;
 }
 .text{
     align-items: center;
     clear: both;
     display: inline-block;
     overflow: hidden;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 @media screen and (min-width: 368px) and (max-width: 768px){
     .right-box{

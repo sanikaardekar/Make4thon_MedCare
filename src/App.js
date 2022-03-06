@@ -13,9 +13,9 @@ import HomePage from "./pages/HomePage/HomePage";
 import Feedback from "./pages/Feedback/Feedback";
 import Quiz from "./pages/Quiz/Quiz";
 import Meditation from "./pages/Meditation/Meditation";
-import Forums from "./pages/Posts/Forums";
 import VideoChat from "./pages/VideoChat/VideoChat";
 import Results from "./pages/Quiz/Results";
+import Posts from './pages/Posts/Posts'
 
 function App() {
   useEffect(() => {

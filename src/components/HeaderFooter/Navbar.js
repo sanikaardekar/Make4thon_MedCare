@@ -83,7 +83,7 @@ const Navbar = () => {
  
   return (
     <AppBar
-      style={{ background: "transparent", boxShadow: "none",paddingBottom:"30px" }}
+      style={{ background: "transparent", boxShadow: "none"}}
       position="static"
     >
       <Container maxWidth="xl">
@@ -155,15 +155,12 @@ const Navbar = () => {
               <Link className="headerLinks" to="/meditation">
                 <button className="btn">Meditation</button>
               </Link>
-              <Link className="headerLinks" to="/forums">
-                <button className="btn">Forums</button>
+              <Link className="headerLinks" to="/posts">
+                <button className="btn">Confer</button>
               </Link>
               <Link className="headerLinks" to="/quiz">
                 <button className="btn">Quiz</button>
               </Link>
-              <Link className="headerLinks" to="/posts">
-                <button className="btn">Confer</button>
-                </Link>
               <Link className="headerLinks" to="/videochat">
                 <button className="btn">VideoChat</button>
               </Link>
