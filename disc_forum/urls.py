@@ -3,4 +3,5 @@ from .views import *
 urlpatterns = [
     path('forum/',ForumView.as_view(),name='Forum'),
     path('discussion/',DiscussionView.as_view(),name='Discussion'),
+    path('post/',PostView.as_view(),name='Post'),
 ]

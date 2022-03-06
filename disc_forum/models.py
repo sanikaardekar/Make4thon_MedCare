@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 from django.db import models 
 from login_signup.models import *
@@ -23,4 +22,7 @@ class Discussion(models.Model):
     def __str__(self):
         return str(self.forum)
 
-
+####Final post model
+class Post(models.Model):
+    posted_by=models.ForeignKey(MyUser,on_delete=models.CASCADE)
+    description=models.TextField()
