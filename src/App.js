@@ -13,17 +13,11 @@ import HomePage from "./pages/HomePage/HomePage";
 import Feedback from "./pages/Feedback/Feedback";
 import Quiz from "./pages/Quiz/Quiz";
 import Meditation from "./pages/Meditation/Meditation";
-<<<<<<< HEAD
 // import Forums from "./pages/Posts/Forums";
 import Posts from './pages/Posts/Posts'
 import VideoChat from "./pages/VideoChat/VideoChat";
 import Results from "./pages/Quiz/Results";
 import Affirmations from "./pages/Affirmations/Affirmations";
-=======
-import VideoChat from "./pages/VideoChat/VideoChat";
-import Results from "./pages/Quiz/Results";
-import Posts from './pages/Posts/Posts'
->>>>>>> 3ca5fcff07c1686abdb3bceaeb215beb30b35e9b
 
 function App() {
   useEffect(() => {
