@@ -73,7 +73,7 @@ export default function Feedback() {
   return (
     <>
       <Grid container display="flex" flexDirection="column" alignItems="center">
-        <Typography variant="h4" textAlign="center" fontFamily="Roboto">
+        <Typography variant="h4" textAlign="center" fontFamily="Roboto" style={{paddingBottom:"20px"}}>
           Nothing to Prove, Everything to Improve
         </Typography>
         <Typography variant="h5" textAlign="center" fontFamily="Roboto">

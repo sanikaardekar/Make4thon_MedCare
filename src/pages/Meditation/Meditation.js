@@ -51,7 +51,7 @@ const Meditation = () => {
             >
               <div className="spotifyPlayer">
                 <iFrame
-                  src="https://open.spotify.com/embed/playlist/5biekm8QYDTMHzxLqkIn6M?utm_source=generator&theme=0"
+                  src="https://open.spotify.com/embed/playlist/3OqePgHE0uNLt0zdrazbWQ?utm_source=generator"
                   width="100%"
                   height="500"
                   frameBorder="0"

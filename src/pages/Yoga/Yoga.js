@@ -3,7 +3,7 @@ import yoga1 from "../../assets/yoga1.svg";
 import yoga2 from "../../assets/yoga2.jpg";
 import yoga3 from "../../assets/yoga3.svg";
 import { useTranslation, Trans } from "react-i18next";
-
+import "../Quiz/Quiz.css";
 
 const lngs = {
   en: { nativeName: "English" },
@@ -23,10 +23,10 @@ export default function Yoga() {
         }}
       >
         <div>
-        <Grid item sm={6} md={8} mt={2} style={{backgroundColor: "#49AB94", display:"flex", justifyContent:"center", alignItems:"center", width: "250px", height: "90px"}}><Typography variant="h5" style={{ textAlign: "center" }}>
+        <Grid item sm={6} md={8} mt={2} style={{backgroundColor: "#49ab9480", display:"flex", justifyContent:"center", alignItems:"center", width: "250px", height: "90px"}}><Typography variant="h5" style={{ textAlign: "center" }}>
         हिंदी में पढ़ें{" "}
         {Object.keys(lngs).map((lng) => (
-            <Button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal', color: "#B10A47" }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+            <Button key={lng} style={{ color: i18n.resolvedLanguage === lng ? '#B10A47' : 'white', fontWeight:"600" }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
               {lngs[lng].nativeName}
             </Button>
           ))}

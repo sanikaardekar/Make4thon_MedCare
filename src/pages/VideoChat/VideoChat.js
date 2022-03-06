@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 
 const VideoChat = () => {
   return (
-    <div style={{paddingLeft:"20px", paddingTop:"30px"}}>
+    <div style={{paddingLeft:"20px", paddingTop:"30px", justifyContent:"center", alignItems:"center"}}>
       <h1 style={{fontFamily:"Roboto", fontSize: "2.5rem", letterSpacing: 1,}}>
         Hey <span style={{color:"#49AB94"}}>{sessionStorage.getItem("Name").toUpperCase()}!</span> Hope everything is doing great
       </h1>

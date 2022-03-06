@@ -9,7 +9,7 @@ import {
   Button,
 } from "@mui/material";
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { URL } from "../../utils/api";
 import { GiButterfly } from "react-icons/gi";
 import ViewPosts from "./ViewPosts";
@@ -101,9 +101,10 @@ export default function Posts() {
                 sx={{
                   marginRight: "40px",
                   backgroundColor: "#49AB94",
-                  color: "#B10A47",
+                  color: "white",
                 }}
                 onClick={handleSubmit}
+                className="postbtn"
               >
                 Post
               </Button>

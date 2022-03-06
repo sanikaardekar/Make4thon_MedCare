@@ -38,3 +38,9 @@
     background: #dd8daa;
     transform: scale(1.1);
 }
+
+.postbtn:hover{
+    background-color: black !important;
+    color:white;
+}
+
