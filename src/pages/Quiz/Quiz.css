@@ -5,7 +5,7 @@
 }
 
 .questionCount {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
 }
 
 .question {
@@ -22,16 +22,19 @@
 }
 
 .ansbutton {
-  color: #f9a671;
+  color: black;
   width: 400px;
   height: 4rem;
   font-size: 2rem;
   padding: 0.2rem;
-  background-color: #49AB94;
+  background-color: #49ab94;
   margin: 0.5rem 0.5rem 0.5rem 0;
   border-radius: 0 2rem 2rem 0;
+  cursor: pointer;
+  text-decoration:none;
 }
 
-.ansbutton :hover{
-    background-color: red;
+.ansbutton:hover {
+    background: #dd8daa;
+    transform: scale(1.1);
 }
