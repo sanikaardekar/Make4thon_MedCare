@@ -13,9 +13,11 @@ import HomePage from "./pages/HomePage/HomePage";
 import Feedback from "./pages/Feedback/Feedback";
 import Quiz from "./pages/Quiz/Quiz";
 import Meditation from "./pages/Meditation/Meditation";
-import Forums from "./pages/Posts/Forums";
+// import Forums from "./pages/Posts/Forums";
+import Posts from './pages/Posts/Posts'
 import VideoChat from "./pages/VideoChat/VideoChat";
 import Results from "./pages/Quiz/Results";
+import Affirmations from "./pages/Affirmations/Affirmations";
 
 function App() {
   useEffect(() => {
@@ -123,6 +125,14 @@ function App() {
             element={
               <>
                 <NotFound />
+              </>
+            }
+          ></Route>
+          <Route
+            path="affirmations"
+            element={
+              <>
+                <Navbar/><Affirmations />
               </>
             }
           ></Route>
