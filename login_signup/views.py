@@ -1,3 +1,4 @@
+import email
 from django.http.response import HttpResponse
 from rest_framework.response import Response
 from django.shortcuts import redirect, render
@@ -28,6 +29,7 @@ class Registration(generics.CreateAPIView):
                 my_user = serializer.save()
                 token = Token.objects.get(user = my_user).key
                 data['old_token']=token
+                data['username']=my_user.username
                 current_site = 'https://new-nekoma-project.herokuapp.com'
                 relative_link = reverse('verifyEmail')          
                 absurl = current_site + relative_link + "?token="+str(token) 
@@ -53,6 +55,7 @@ def verifyEmail(request):
     data['response'] = "successfully registered a new user"
     data['email'] = user.email
     data['user_id']=user.user_id
+    data['username']=user.username
     if user.is_active == False:
         user.is_active = True
         user.save()
@@ -79,4 +82,5 @@ class LoginView(generics.CreateAPIView):
             data['email'] = user.email
             data['token'] = token
             data['user_id']=user.user_id
+            data['username']=user.username
             return Response(data, status = status.HTTP_200_OK)
