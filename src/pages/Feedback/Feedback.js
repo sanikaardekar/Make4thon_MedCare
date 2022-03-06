@@ -37,9 +37,8 @@ export default function Feedback() {
         >
           {stars.map((_, index) => {
             return (
-              <Grid container>
+              <Grid container key={index}>
                 <AiOutlineStar
-                  key={index}
                   size={24}
                   onClick={() => handleClick(index + 1)}
                   onMouseOver={() => handleMouseOver(index + 1)}

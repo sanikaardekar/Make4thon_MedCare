@@ -15,6 +15,7 @@ import Quiz from "./pages/Quiz/Quiz";
 import Meditation from "./pages/Meditation/Meditation";
 import Forums from "./pages/Posts/Forums";
 import VideoChat from "./pages/VideoChat/VideoChat";
+import Results from "./pages/Quiz/Results";
 
 function App() {
   useEffect(() => {
@@ -105,6 +106,15 @@ function App() {
               <>
                 <Navbar />
                 <VideoChat />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/results"
+            element={
+              <>
+                <Navbar />
+                <Results />
               </>
             }
           ></Route>
