@@ -68,7 +68,7 @@ export default function Login() {
       );
       result = await result.json();
       console.log(result);
-      localStorage.setItem('')
+      // localStorage.setItem('')
       if (result.token) {
         history("/home");
       }
@@ -116,7 +116,7 @@ export default function Login() {
           console.log(result);
           if (result.token) {
           sessionStorage.setItem('Name', result.username);
-          sessionStorage.setItem('user_id', result.user_id);
+          sessionStorage.setItem('user_id', JSON.parse(JSON.stringify(result.user_id)));
           sessionStorage.setItem('token', result.token)
             history("/home");
           }

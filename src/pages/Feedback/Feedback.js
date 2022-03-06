@@ -1,17 +1,65 @@
 import { Typography, Grid, TextField, Button } from "@mui/material";
 import { useState } from "react";
-import { AiOutlineStar } from "react-icons/ai";
+import { BsStar } from "react-icons/bs";
 import swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+
 
 export default function Feedback() {
   const navigate = useNavigate();
   const [currentValue, setCurrentValue] = useState(0);
   const [hoverValue, setHoverValue] = useState(undefined);
-  const stars = Array(5).fill(0);
+  const star = Array(5).fill(0);
+  const [feedback, setFeedback] = useState("");
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    //const data = new FormData(event.currentTarget);
+    // console.log({
+    //   email: data.get("email"),
+    //   password: data.get("password"),
+    // });
+    postFeedback();
+  };
+  async function postFeedback() {
+    // console.log("hello");
+    try {
+      let token = sessionStorage.getItem('token');
+      let result = await fetch(
+        URL + "contactus/",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            feedback: feedback,
+            stars: currentValue,
+          }),
+          headers: {
+            Authorization: `token ${token}`,
+            Accept: "application/json",
+            "Content-Type": "application/json",
+
+          },
+        }
+        
+      );
+      result = await result.json();
+      console.log(result);
+      if(result){
+        swal.fire({
+            confirmButtonText:'We are Grateful for your Feedback'
+          }).then(()=>{
+           navigate('/home')
+          })
+      }
+    } catch (error) {
+      console.log("Error" + error);
+     }
+  }
+
 
   const handleClick = (value) => {
     setCurrentValue(value);
+    console.log(value);
   };
 
   const handleMouseOver = (newHoverValue) => {
@@ -21,24 +69,24 @@ export default function Feedback() {
   const handleMouseLeave = () => {
     setHoverValue(undefined);
   };
-  const name = sessionStorage.getItem('Name');
-  console.log(name);
+  const name = sessionStorage.getItem('Name').toUpperCase();
   return (
     <>
       <Grid container display="flex" flexDirection="column" alignItems="center">
         <Typography variant="h4" textAlign="center" fontFamily="Roboto">
           Nothing to Prove, Everything to Improve
         </Typography>
-        <Typography variant="h4" textAlign="center" fontFamily="Roboto">
+        <Typography variant="h5" textAlign="center" fontFamily="Roboto">
           Hey {name}, Help us Improve
         </Typography>
         <div
           style={{ display: "flex", flexDirection: "row", marginTop: "70px" }}
         >
-          {stars.map((_, index) => {
+          {star.map((_, index) => {
             return (
-              <Grid container key={index}>
-                <AiOutlineStar
+              <Grid container>
+                <BsStar
+                  key={index}
                   size={24}
                   onClick={() => handleClick(index + 1)}
                   onMouseOver={() => handleMouseOver(index + 1)}
@@ -62,18 +110,17 @@ export default function Feedback() {
             multiline
             rows={4}
             style={{ color: "#B10A47" }}
+            value={feedback}
+            onChange={(e) => setFeedback(e.target.value)}
           />
         </div>
         <div style={{ marginTop: "15px" }}>
           <Button
             variant="contained"
             style={{ backgroundColor: "#49AB94", color: "#B10A47" }}
-            // onClick={ ()=>{
-            //   swal.fire("We are Grateful for your Feedback", 'Success')
-            //   .then(navigate('/home'))
-            // }}
+            onClick={handleSubmit}
           >
-            Thank You
+            Done!
           </Button>
         </div>
       </Grid>

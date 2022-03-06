@@ -74,11 +74,11 @@ function App() {
             }
           ></Route>
           <Route
-            path="/forums"
+            path="/posts"
             element={
               <>
                 <Navbar />
-                <Forums />
+                <Posts />
               </>
             }
           ></Route>

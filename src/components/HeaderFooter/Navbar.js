@@ -17,6 +17,7 @@ import Button from "@mui/material/Button";
 import Avatar from '@mui/material/Avatar';
 import colors from "../../utils/colors"
 import "./Header.css";
+import logo from '../../assets/logo.jpg';
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -78,7 +79,7 @@ const Navbar = () => {
       </List>
     </Box>
   );
-  const name = localStorage.getItem("username");
+  const name = sessionStorage.getItem("Name").charAt(0).toUpperCase();
  
   return (
     <AppBar
@@ -87,14 +88,15 @@ const Navbar = () => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
+          {/* <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-          >
-            <GiMeditation style={{ fontSize: "3rem", color: "black" }} />
-          </Typography>
+          > */}
+            {/* <GiMeditation style={{ fontSize: "3rem", color: "black" }} /> */}
+            <img src={logo} alt="logo" style={{width: "100px", height:"100px"}}/>
+          {/* </Typography> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <React.Fragment key={anchor}>
@@ -159,6 +161,9 @@ const Navbar = () => {
               <Link className="headerLinks" to="/quiz">
                 <button className="btn">Quiz</button>
               </Link>
+              <Link className="headerLinks" to="/posts">
+                <button className="btn">Confer</button>
+                </Link>
               <Link className="headerLinks" to="/videochat">
                 <button className="btn">VideoChat</button>
               </Link>
@@ -167,7 +172,7 @@ const Navbar = () => {
               </Link>
             </div>
           </Box>
-          <Avatar sx={{ bgcolor: colors.greenA }}>{name}</Avatar>
+          <Avatar sx={{ bgcolor: colors.greenA, width:"60px", height:"60px"}}>{name}</Avatar>
         </Toolbar>
       </Container>
     </AppBar>
