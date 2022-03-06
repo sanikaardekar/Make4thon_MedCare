@@ -1,8 +1,10 @@
 .inputTime{
     display: flex;
     flex-direction: row;
-    position: absolute;
     z-index:9;
+    border: 2px solid #49ab94c2;
+    padding:11px;
+    border-radius: 20px;
 }
 .inputTime input{
     max-width: 10vh;
@@ -20,7 +22,6 @@
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0;
 }
 
 input[type=number] {
@@ -29,8 +30,7 @@ input[type=number] {
 
 .minInput{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 .minInput button{
     padding-top:30px;
@@ -67,7 +67,6 @@ input[type=number] {
 }
 .setBtn:hover{
     background-color:#49ab9480 ;
- 
 }
 .countdown{
     display: flex;
@@ -75,13 +74,16 @@ input[type=number] {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    position: absolute;
     font-size: 3rem;
     z-index:9;
+    border: 2px solid #49ab94c2;
+    padding:11px;
+    border-radius: 20px;
 }
 .countdown p{
     font-family: 'Allison', cursive;
     font-size: 4rem;
+    margin: 0;
 }
 .timerActionBtn{
     height: 4rem;
@@ -114,6 +116,7 @@ input[type=number] {
     }
     .countdown{
         font-size: 2rem;
+        padding-bottom: 20px;
     }
     .countdown p{
         font-size: 3rem;
@@ -123,38 +126,7 @@ input[type=number] {
         height: 3rem;
         width: 3rem;
     }
-}
-@media only screen and (max-width: 460px) {
-    .inputTime input{
-        max-width: 6vh;
-        padding: 3px 0px;
-        font-size: 1.2rem;
-        margin: 5px;
-        margin-top: -20px;
-         margin-bottom: -20px;
-    }
-    .secInput button{
-        padding-top:20px;
-        padding-bottom:20px;
-    }
-    .minInput button{
-        padding-top:20px;
-        padding-bottom:20px;
-    }
-    .setBtn{
-        padding: 4px 6px;
-        margin: auto 4px;
-        font-size: 1.1rem;
-    }
-    .timerActionBtn{
-        height: 1.8rem;
-        width: 1.8rem;
-    }
-    .countdown{
-        font-size: 1.5rem;
-    }
-    .countdown p{
-        font-size: 3rem;
-        margin-top: -10px;
+    .inputTime{
+        padding-bottom: 144px;
     }
 }

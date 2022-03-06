@@ -31,11 +31,8 @@ const CountDownTimer = () => {
   });
   return (
     <>
-
-
       {inputshow && (
-        <div className="inputTime">
-          
+        <div className="inputTime">         
           <div className="minInput">
               <button onClick={()=>setm(m+1)} ><IoIosArrowDropup color='#000' size='1.5rem'/></button>
               <input
@@ -80,7 +77,7 @@ const CountDownTimer = () => {
             direction="backward"
             startImmediately={true}
           >
-            {({ start, resume, pause, stop, reset, timerState }) => (
+            {({ start, pause, reset }) => (
               <>
                 <div>
                   <Timer.Hours /> : <Timer.Minutes /> : <Timer.Seconds />
@@ -99,8 +96,7 @@ const CountDownTimer = () => {
                 </div>
                 
               </>
-            )}
-            
+            )}  
           </Timer>
         )}
       </div>

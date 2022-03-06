@@ -1,0 +1,37 @@
+.quesWrapper {
+  border: 2px solid black;
+  width: 500px;
+  padding: 2rem 5rem 1rem 5rem;
+}
+
+.questionCount {
+  font-size: 1.8rem;
+}
+
+.question {
+  color: #B10A47;
+  font-size: 2rem;
+}
+
+.ansSection {
+  font-size: 2rem;
+}
+
+.answerList {
+  list-style-type: none;
+}
+
+.ansbutton {
+  color: #f9a671;
+  width: 400px;
+  height: 4rem;
+  font-size: 2rem;
+  padding: 0.2rem;
+  background-color: #49AB94;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.ansbutton :hover{
+    background-color: red;
+}

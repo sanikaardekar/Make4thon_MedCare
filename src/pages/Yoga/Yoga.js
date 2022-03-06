@@ -48,11 +48,13 @@ export default function Yoga() {
             <Grid item sm={12} md={8} mt={4}>
               <Typography variant="h3">{t('description.part2')}</Typography>
               <Typography variantMapping="p">
-                <Trans i18nKey="description.part1">
+                <i>
+                <Trans i18nKey="description.part1" >
                   Commonly known as “the tree pose”, this asana is very basic
                   and helps improve your sense of self and centres your body and
                   mind.
                 </Trans>
+                </i>
               </Typography>
               <br />
               <Typography variant="h5">{t('description.part3')}</Typography>
@@ -96,7 +98,9 @@ export default function Yoga() {
             <Grid item sm={12} md={8} mt={4}>
               <Typography variant="h3">{t('description.part7')}</Typography>
               <Typography variantMapping="p">
+              <i>
               {t('description.part8')}
+              </i>
               </Typography>
               <br />
               <Typography variant="h5">{t('description.part3')}</Typography>
@@ -141,7 +145,9 @@ export default function Yoga() {
             <Grid item sm={6} md={8} mt={4}>
               <Typography variant="h3">{t('description.part13')}</Typography>
               <Typography variantMapping="p">
+              <i>
               {t('description.part14')}
+              </i>
               </Typography>
               <br />
               <Typography variant="h5">{t('description.part3')}</Typography>

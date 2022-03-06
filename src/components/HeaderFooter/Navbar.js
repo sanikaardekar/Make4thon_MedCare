@@ -15,7 +15,6 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import Avatar from '@mui/material/Avatar';
-// import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import colors from "../../utils/colors"
 import "./Header.css";
 import logo from '../../assets/logo.jpg';
@@ -65,8 +64,8 @@ const Navbar = () => {
             </ListItemText>
           </ListItem>
         </Link>
-        {["Meditation", "Yoga", "Quiz","Forums", "Feedback"].map((text, index) => (
-          <Link className="mobileDrawer" to={`/${text.toLowerCase()}`} style={{textDecoration:"none"}}>
+        {["Yoga","Meditation","Forums","Quiz","VideoChat","Feedback"].map((text, index) => (
+          <Link className="mobileDrawer" to={`/${text.toLowerCase()}`} style={{textDecoration:"none"}} key={index}>
             <ListItem button key={text} >
               <ListItemIcon>
                 <HiOutlineArrowNarrowRight className="mobileDrawer" />
@@ -78,7 +77,6 @@ const Navbar = () => {
           </Link>
         ))}
       </List>
-      {/* <hr style={{color:"white"}}/> */}
     </Box>
   );
   const name = sessionStorage.getItem("Name").charAt(0).toUpperCase();
@@ -151,17 +149,23 @@ const Navbar = () => {
               <Link className="headerLinks" to="/home">
                 <button className="btn">Home</button>
               </Link>
+              <Link className="headerLinks" to="/yoga">
+                <button className="btn">Yoga</button>
+              </Link>
               <Link className="headerLinks" to="/meditation">
                 <button className="btn">Meditation</button>
               </Link>
-              <Link className="headerLinks" to="/yoga">
-                <button className="btn">Yoga</button>
+              <Link className="headerLinks" to="/forums">
+                <button className="btn">Forums</button>
               </Link>
               <Link className="headerLinks" to="/quiz">
                 <button className="btn">Quiz</button>
               </Link>
               <Link className="headerLinks" to="/posts">
                 <button className="btn">Confer</button>
+                </Link>
+              <Link className="headerLinks" to="/videochat">
+                <button className="btn">VideoChat</button>
               </Link>
               <Link className="headerLinks" to="/feedback">
                 <button className="btn">Feedback</button>

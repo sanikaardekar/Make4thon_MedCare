@@ -19,7 +19,7 @@ import swal from 'sweetalert2';
 import { URL } from "../utils/api";
 
 export default function SignupForAdmin() {
-  const [isLoading, setLoading] = useState(true);
+  const [setLoading] = useState(true);
 
   const [values, setValues] = useState({
     email: "",
@@ -38,10 +38,6 @@ export default function SignupForAdmin() {
     console.log(values);
   };
 
-  // const handleClickShowPassword2 = () => {
-  //   setValues({ ...values, showPassword2: !values.showPassword2 });
-  // };
-
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
   };
@@ -55,11 +51,6 @@ export default function SignupForAdmin() {
       username: data.get("username"),
     });
     createacc();
-  };
-
-  const saveUsername = (value) => {
-    localStorage.setItem("username", value);
-    //localStorage.getItem("username");
   };
 
   const history = useNavigate();
